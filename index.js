@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 // setup static and middleware
 app.use(express.static('./public'))
@@ -21,9 +22,6 @@ app.all('*',(req,res)=>{
     res.status(404).send('resource not found')
 })
 
-var server = app.listen(8081, function () {
-    var host = server.address().address
-    var port = server.address().port
-    
-    console.log("Example app listening at http://%s:%s", host, port)
- })
+
+
+.listen(port); // palvelin kuuntelee joko pilvipalvelun porttia tai paikallista porttia nro 3000
