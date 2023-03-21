@@ -1,0 +1,28 @@
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif;
+}
+#otsikko {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+ body {
+    background-image: url('/images/frontpage_background.jpg');
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+  }
+
+#myNavbar {
+    background-color: #dddddd;
+}
+#logotxt {
+    margin-top: 200px;
+}
+#intro {
+    color: black;
+}
