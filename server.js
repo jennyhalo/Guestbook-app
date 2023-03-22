@@ -13,23 +13,6 @@ app.use(express.static('./public'))
 // middleware to parse the body of a request as JSON
 app.use(express.json());
 
-app.post('/newmessage.html', (req, res) => {
-    // destructure the request body
-    let resData = {
-        serverData: request.body,
-    };
-    console.log(resData)
-})
-
-
-
-
-
-
-app.get('/newmessage.html', function (req, res) {
-    res.sendFile( __dirname + "/" + "newmessage.html" );
- })
-
 // 404
 app.all('*',(req,res)=>{
     res.status(404).send('resource not found')
