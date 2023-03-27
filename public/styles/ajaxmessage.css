@@ -15,3 +15,51 @@ body,h1,h2,h3,h4,h5,h6 {
 #myNavbar {
     background-color: #dddddd;
 }
+#new_message {
+  background-color: #dddddd;
+  width: 70%; 
+}
+fieldset {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+  background-color: aliceblue;
+}
+label {
+  display: block;
+  margin-top: 1em;
+}
+label:first-of-type {
+  margin-top: 0;
+}
+input {
+  padding: .5em;
+  border: solid 1px;
+}
+
+textarea {
+  min-height: 8em;
+  min-width: 100%;
+  padding: .5em;
+  border: solid 1px;
+}
+input[type="submit"] {
+  padding: .5em 1em;
+  border-radius: 6px;
+  color: #777;
+  font-family: 'lato', sans-serif;
+  font-size: .8em;
+  background-color: rgb(182, 240, 240);
+
+
+}
+@media screen and (min-width: 430px) {
+  fieldset {
+      width:40%;
+      min-width: 320px;
+      margin: auto;
+      margin-top: 4em;
+  }
+}

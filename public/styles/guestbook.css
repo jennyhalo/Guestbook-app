@@ -24,6 +24,7 @@ table {
     width: 70%;
     background-color: aliceblue;
     margin: auto;
+    margin-bottom: 5em;
   }
   
   td, th {

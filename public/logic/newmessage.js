@@ -1,14 +1,14 @@
 
-const formEl = document.querySelector('.form');
+// const formEl = document.querySelector('.form');
 
-formEl.addEventListener('submit', event => {
-// Estetään sivun vakiotoiminta (päivitys) kun painaa submit nappia
-   event.preventDefault();
+// formEl.addEventListener('submit', event => {
+// // Estetään sivun vakiotoiminta (päivitys) kun painaa submit nappia
+//    event.preventDefault();
 
-   const formData = new FormData(formEl);
-   const data = Object.fromEntries(formData);
-   console.log(data);
+//    const formData = new FormData(formEl);
+//    const data = Object.fromEntries(formData);
+//    console.log(data);
 
 
 
-})
+// })
