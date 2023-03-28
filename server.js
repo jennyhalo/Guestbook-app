@@ -10,6 +10,8 @@ app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 // Määritellään portti
 const port = process.env.PORT || 3000;
+
+
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 
@@ -66,11 +68,8 @@ fs.writeFile('./public/data.json', jsonStr, (err) => {
 // uudelleenohjataan käyttäjä guestbook sivulle viestin lähettämisen jälkeen
 res.redirect('/newmessage');
 });
-//
-app.get('/ajaxmessage', function (req, res) {
-    res.render('ajaxmessage');
-});
-// Lomakkeen lähetys
+
+// Lomakkeen lähetys newmessage sivulta paikalliseen data.json tiedostoon
 app.post('/newmessage', function (req, res) {
     
     var data = require('./public/data.json');
@@ -100,8 +99,20 @@ app.post('/newmessage', function (req, res) {
         console.log('it is saved')
     });
     // uudelleenohjataan käyttäjä guestbook sivulle viestin lähettämisen jälkeen
-    res.redirect('/ajaxmessage');
+    res.redirect('/guestbook');
     });
+// renderöi ajaxmessage
+app.get('/ajaxmessage', function (req, res) {
+    res.render('ajaxmessage');
+});
+app.post('/ajaxmessage', (req, res) => {
+  res.json([{
+    username_received: req.body.username,
+    country_received: req.body.country,
+    message_received: req.body.message
+  }]);
+
+});
 
 // 404
 app.get('*',(req,res)=>{
@@ -110,4 +121,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000); // palvelin kuuntelee joko pilvipalvelun porttia tai paikallista porttia nro 3000
+app.listen(port, () =>{
+    console.log(`Server running on port ${port}`)
+}); // palvelin kuuntelee joko pilvipalvelun porttia tai paikallista porttia nro 3000
