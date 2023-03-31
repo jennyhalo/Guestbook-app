@@ -8,11 +8,12 @@ window.onload = (event) => {
   nappi.addEventListener("click", async (e) => {
     // ehkäistään sivun oletusasetus joka päivittää sivun
     e.preventDefault();
-
+    //määritellään muuttujat
     var uname = document.getElementById("username").value;
     var ctry = document.getElementById("country").value;
     var msg = document.getElementById("message").value;
 
+    // jos if-ehdot täyttyy, jatkamme lomakkeen kenttien lähettämiseen
     if (uname) {
       if (ctry) {
         if (msg) {
@@ -36,7 +37,9 @@ window.onload = (event) => {
                 // muutetaan id 'string' muotoon
                 var idstr = id.toString();
                 // Html sivulla on Ul elementti id:ll' #ajaxviestit, jonne appendataan li elmentti id:n kanssa
-                $("#ajaxviestit").append("<li id ='" + idstr + "' class =\'listStyle\'></li>");
+                $("#ajaxviestit").append(
+                  "<li id ='" + idstr + "' class ='listStyle'></li>"
+                );
                 // käydään läpi jokainen objekti ja haetaan niiden key ja value
                 Object.entries(obj).forEach(([key, value]) => {
                   // lokitetaan objectit eli key ja value parit
@@ -55,6 +58,7 @@ window.onload = (event) => {
               });
             }
           );
+          // Varmistetaan ja hälytetään jos yrittää lähettää viestin tyhjällä kentällä
         } else {
           alert("Please fill all fields in the form!");
         }
@@ -64,5 +68,7 @@ window.onload = (event) => {
     } else {
       alert("Please fill all fields in the form!");
     }
+    // Tyhjennetään kaikki kentät viestin lähetyksen jälkeen
+    document.getElementById("messageform").reset();
   });
 };

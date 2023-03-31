@@ -30,13 +30,11 @@
     margin: auto;
     background-image: url('/images/old_paper.png');
     min-height: 100%;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 300px;
+    background-size: 500px;
     color: black;
     margin-bottom: 100px;
-    background-color: rgba(216, 216, 216, 0.839);
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
     padding: 90px;
@@ -45,7 +43,10 @@ footer {
     margin-bottom: 0%;
     background-color: #000000cb;
     color: whitesmoke;
-    padding: 50px;
+    padding: 5px;
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

@@ -60,13 +60,24 @@ textarea {
     margin-left: 5px;
     background-color: rgb(182, 240, 240);
   }
+  #tyhjennä:hover {
+    background-color: #f0064d; /* Green */
+    color: white;
+  }
+  #btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
 footer {
     margin-bottom: 0%;
     background-color: #000000cb;
     color: whitesmoke;
-    padding: 50px;
+    padding: 5px;
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 @media screen and (min-width: 430px) {
     fieldset {

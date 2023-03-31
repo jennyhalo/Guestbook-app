@@ -56,6 +56,7 @@ input[type="submit"] {
 }
 #ajaxviestit {
   margin: auto;
+  margin-bottom: 100px;
   background-color: #4d4d4d;
   width: 40%; 
   border-radius: 6px;
@@ -75,14 +76,25 @@ input[type="submit"] {
   border-radius: 3px;
   margin-left: 5px;
 }
+#tyhjennä:hover {
+  background-color: #f0064d; /* Green */
+  color: white;
+}
+#btn:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
 footer {
   margin-bottom: 0%;
   margin-top: 50px;
   background-color: #000000cb;
   color: whitesmoke;
-  padding: 50px;
+  padding: 5px;
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .listStyle {
   list-style-type: "\1f337";
@@ -96,5 +108,14 @@ footer {
       margin: auto;
       margin-top: 4em;
       margin-bottom: 30px;
+  }
+  #ajaxviestit {
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: #4d4d4d;
+    width: 40%; 
+    min-width: 420px;
+    border-radius: 6px;
+    color: aqua;
   }
 }

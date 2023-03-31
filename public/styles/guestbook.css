@@ -47,9 +47,13 @@ footer {
   margin-bottom: 0%;
   background-color: #000000cb;
   color: whitesmoke;
-  padding: 50px;
+  padding: 5px;
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 @media screen and (min-width: 430px) {
   table {
