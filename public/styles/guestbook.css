@@ -21,27 +21,7 @@ body {
 }
 #tableMsg {
   padding: 20px;
-  margin-bottom: 20px;
-}
-  /* Määritellään tyyli napille jolla pääsee takaisin sivun alkuun  */
-#backToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgb(255, 174, 0);
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-/* Kursorin ollessa napin päällä, vaihdetaan napin väriä */
-#backToTopBtn:hover {
-  background-color: rgb(145, 42, 180);
+  margin-bottom: 400px;
 }
 footer {
   margin-bottom: 0%;
@@ -61,6 +41,6 @@ footer {
       min-width: 400px;
       margin: auto;
       margin-top: 4em;
-      margin-bottom: 30px;
+      margin-bottom: 85px;
   }
 }
