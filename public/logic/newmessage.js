@@ -1,14 +1,25 @@
-
-// const formEl = document.querySelector('.form');
-
-// formEl.addEventListener('submit', event => {
-// // Estetään sivun vakiotoiminta (päivitys) kun painaa submit nappia
-//    event.preventDefault();
-
-//    const formData = new FormData(formEl);
-//    const data = Object.fromEntries(formData);
-//    console.log(data);
-
-
-
-// })
+(function () {
+  "use strict";
+  window.addEventListener(
+    "load",
+    function () {
+      // Haetaan lomake johon halutaan lisätä tyyli ja vahvistaminen
+      var forms = document.getElementsByClassName("needs-validation");
+      // käydään jokainen lomakkeen input kenttä läpi ja estetään tyhjän kentän lähetys
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    },
+    false
+  );
+})();

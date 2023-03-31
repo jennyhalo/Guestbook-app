@@ -1,7 +1,4 @@
-body,h1,h2,h3,h4,h5,h6 {
-    font-family: "Lato", sans-serif;
-  } 
-  body {
+body {
     background-image: url('/images/ajaxmessage_background.jpg');
     min-height: 100%;
     background-attachment: fixed;
@@ -13,7 +10,10 @@ body,h1,h2,h3,h4,h5,h6 {
     line-height: 1.8;
   }
 #myNavbar {
-    background-color: #dddddd;
+    background-color: #000000cb;
+}
+#navstyle {
+    list-style-type: none !important;
 }
 #new_message {
   background-color: #dddddd;
@@ -53,32 +53,48 @@ input[type="submit"] {
   font-family: 'lato', sans-serif;
   font-size: .8em;
   background-color: rgb(182, 240, 240);
-
-
 }
 #ajaxviestit {
+  margin: auto;
   background-color: #4d4d4d;
-  width: 70%; 
+  width: 40%; 
   border-radius: 6px;
-  margin: 2em 0;
-  padding: 1em 2em;
   color: aqua;
+}
+/*tyylit nappuloille*/
+#tyhjennä {
+  float: right;
+  padding: 5px;
+  border: solid 2px;
+  border-radius: 3px;
 }
 #btn {
   float: right;
+  padding: 5px;
+  border: solid 2px;
+  border-radius: 3px;
+  margin-left: 5px;
 }
-
+footer {
+  margin-bottom: 0%;
+  margin-top: 50px;
+  background-color: #000000cb;
+  color: whitesmoke;
+  padding: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+}
+.listStyle {
+  list-style-type: "\1f337";
+  padding: .5em;
+  font-size: large;
+}
 @media screen and (min-width: 430px) {
   fieldset {
       width:40%;
-      min-width: 320px;
+      min-width: 420px;
       margin: auto;
       margin-top: 4em;
-  }
-  #ajaxviestit {
-    width:40%;
-    min-width: 320px;
-    margin: auto;
-    margin-top: 4em;
+      margin-bottom: 30px;
   }
 }
